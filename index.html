@@ -2,38 +2,41 @@
 <!-- NOTE: the string 'TODO' appears everywhere you need to fill in information. -->
 <html>
 <head>
-<title>TODO:Title For Your Game</title>
+<title>Rush Hour with Parking</title>
 <!-- NOTE: this CSS sets up the ".figure" class to center images, and instructs images in ".figure"s to have space around them and to render crisp pixel edges when scaled [e.g. for retina displays]. -->
 <style>
 .figure {
-	text-align:center;
 }
 .figure > img {
 	margin: 0px 20px;
 	image-rendering: pixelated;
+	width: 500px;
 }
 </style>
 </head>
 <body>
-<h1>TODO: Title For Your Game</h1>
-<p>TODO: one-sentence summary of your game, highlighting the unique "hook" of the game.</p>
+<h1>Rush Hour with Parking</h1>
+<p><a href="https://en.wikipedia.org/wiki/Rush_Hour_(puzzle)">Rush Hour</a> but with parking spaces that you can't move off of.</p>
 <!-- the <div> wrapping this image centers it on the page. -->
 <!-- TODO: drawing showing the main view of the game during play -->
-<div class="figure">
-<img src="game.png" />
-</div>
-<p>TODO: more information (2-3 sentences) about gameplay, referring to the image above.</p>
+<div class=figure>
+<img src="pieces.jpg" />
+<p>The game is played on a 6x6 board viewed from above. The game has only plain tiles, parking spaces (which are 2 squares long), and the exit tile. The game is played by moving cars in the board until there's a clear path from the red car to the exit tile. The score is the number of levels completed.</p>
 
 <h2>Gameplay</h2>
-<p>TODO: Describe how the game starts, plays (e.g. what are the controls), and ends.</p>
+<p><b>Start: </b>The player (the red car) is placed at a random space on the board in such a way that the car is oriented horzontally and the back of the car is against the back left side of the board. Then end tile is placed directly opposite to the player on the front right side of the board. 1-3 parking spaces are placed randomly. Parking spaces must have one square on at least one edge of the board. Random cars (either normal 2 tile ones or 3 tile long trucks) are then generated in radom spaces on the board and either horizontal or vertical orientation on the board until it is no longer possible to generate more without blocking all possible solutions. </p>
+<p><b>Parking:</b>Besides the player's car, once a car has been moved onto a parking space, it cannot be moved again.</p>
+<img src="parked.jpg" />
+<p><b>Controls: </b>Pressing the 'space' key changes the current selected car. The arrow keys move the cars. Car's can only move along their current orientation forwards or backwards. A car only needs to cover all 2 squares of the parking space to be considered "parked". Because parking spaces may result in no longer solvable boards, pressing 'r' resets the board.</p>
+<img src="moves.jpg" />
+<p><b>Finish: </b>Once the row of tiles between the player and the exit tile are empty of other cars, the player can exit the traffic jam. </p>
+<p><b>Drawing: </b>The board is drawn in isometric view. Every thing is a solid colored lambert. All non-player car colors are randomly generated shades of blue, green, and purple.</p>
+<img src="isometric.jpg" />
 <!-- TODO: illustrate your descriptions with more drawings -->
-<div class="figure">
-<img src="before-reset.png" />
-<img src="after-reset.png" />
 </div>
 
 <h2>Assets</h2>
-<p>TODO: Provide a link to any preliminary 3D models, sounds, or <a href="https://github.com/ixchow/amoeba-escape/blob/master/tiles.png">textures</a> for the game. Make sure to only link to assets with appropriate licenses.</p>
+<p> <a href="https://www.turbosquid.com/3d-models/3d-city-vehicles-simple-model-1160672">Free low-poly cars models by Anton Moek on TurboSquid</a></p>
 
 </body>
 </html>
